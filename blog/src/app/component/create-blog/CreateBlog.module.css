@@ -1,0 +1,20 @@
+.blogInput {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 16px;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.submitButton {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.submitButton:hover {
+  background-color: #45a049;
+}
