@@ -1,0 +1,54 @@
+.overview {
+  display: flex;
+  gap: 5vw;
+}
+
+.sidebar {
+  width: 20vw;
+  background-color: #ffffff;
+  height: 100vh;
+}
+
+.sidebar button {
+  width: 100%;
+  height: 10vh;
+  position: relative;
+  top: 150px;
+  border-radius: 20px;
+  background-color: #02ffec;
+  margin-bottom: 20px;
+}
+
+.sidebar button:hover {
+  background-color: #72edff;
+}
+
+.mainsection {
+  width: 75vw;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+}
+
+.mainsection img {
+  position: relative;
+  top: 100px;
+}
+
+.mainsection p {
+  position: relative;
+  top: 150px;
+  font-size: 22px;
+  font-family: "Fira Code";
+  width: 300px;
+}
+
+.inputArea input {
+  width: 100%;
+  height: 10vh;
+  border: 1px solid black;
+  border-radius: 10px;
+  position: relative;
+  top: 150px;
+  padding-left: 10px;
+}

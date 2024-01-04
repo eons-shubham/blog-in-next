@@ -4,6 +4,7 @@ import BlogCard from "./component/blog-card/BlogCard";
 import Navbar from "./component/navbar/Navbar";
 import styles from "./page.module.css";
 import axios from "axios";
+import Footer from "./component/footer/Footer";
 
 const Home = () => {
   const [blogData, setBlogData] = useState([]);
