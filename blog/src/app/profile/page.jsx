@@ -1,11 +1,21 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import styles from "./Profile.module.css";
 
 const page = () => {
-  const [name, setName] = useState("Harry");
-  const [bio, setBio] = useState("understanding the norms of the world !!!");
+  const [name, setName] = useState("");
+  const [bio, setBio] = useState("");
+
+  useEffect(() => {
+    if (localStorage.getItem("name") === null)
+      localStorage.setItem("name", "Yami Sukihero");
+    if (localStorage.getItem("bio") === null)
+      localStorage.setItem("bio", "Captain of magic knight squard Black Bull");
+
+    setName(localStorage.getItem("name"));
+    setBio(localStorage.getItem("bio"));
+  }, []);
 
   const [showName, setShowName] = useState(0);
   const [showBio, setShowBio] = useState(0);
@@ -15,6 +25,7 @@ const page = () => {
     if (val === 5) {
       if (showName) {
         setName(textVar);
+        localStorage.setItem("name", `${textVar}`);
         setTextVar("");
       }
       setShowName((prev) => !prev);
@@ -23,6 +34,7 @@ const page = () => {
     } else {
       if (showBio) {
         setBio(textVar);
+        localStorage.setItem("bio", `${textVar}`);
         setTextVar("");
       }
       setShowName(0);
@@ -59,8 +71,10 @@ const page = () => {
         </div>
       </div>
       <div className={styles.mainsection}>
-        <div>
-          <img src="avatar.png" alt="" width={150} height={150} />
+        <div className={styles.imageArea}>
+          <img src="avatar.png" alt="avatar" height={150} width={150} />
+        </div>
+        <div className={styles.personalDetails}>
           <p>{name}</p>
           <p>{bio}</p>
         </div>
