@@ -1,0 +1,63 @@
+.overview {
+  display: flex;
+  gap: 5vw;
+}
+
+.sidebar {
+  width: 20vw;
+  background-color: #ffffff;
+  height: 100vh;
+}
+
+.sidebar button {
+  width: 100%;
+  height: 10vh;
+  position: relative;
+  top: 150px;
+  border-radius: 20px;
+  background-color: #02ffec;
+  margin-bottom: 20px;
+}
+
+.sidebar button:hover {
+  background-color: #72edff;
+}
+
+.mainsection {
+  width: 70vw;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.inputArea input {
+  width: 100%;
+  height: 10vh;
+  border: 1px solid black;
+  border-radius: 10px;
+  position: relative;
+  top: 150px;
+  padding-left: 10px;
+}
+
+.personalDetails {
+  width: 300px;
+  height: 50px;
+  text-align: center;
+  font-size: 22px;
+  position: absolute;
+  top: 30vh;
+}
+
+.imageArea {
+  width: 150px;
+  height: 150px;
+  border: 5px solid #72edff;
+  border-radius: 100%;
+  overflow: hidden;
+  object-fit: contain;
+  position: absolute;
+  top: 5vh;
+}

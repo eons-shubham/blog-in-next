@@ -1,0 +1,24 @@
+.button {
+  background-color: #0070f3;
+  border-radius: 4px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 20px;
+}
+
+.bloginput {
+  border-radius: 4px;
+  font-size: 16px;
+  min-height: 150px;
+  padding: 8px;
+  resize: vertical;
+  width: 100%;
+}
+
+.titleinput {
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 8px;
+  width: 100%;
+}
