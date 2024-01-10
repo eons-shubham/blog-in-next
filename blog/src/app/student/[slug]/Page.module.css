@@ -1,0 +1,28 @@
+.blogpost {
+  font-family: "Arial", "sans-serif";
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  margin: auto;
+}
+.blogtitle {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  display: block;
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.blogcontent {
+  display: block;
+  font-size: 20px;
+  width: 800px;
+  word-wrap: break-word;
+  border: 1px solid grey;
+  min-height: 40vh;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+}

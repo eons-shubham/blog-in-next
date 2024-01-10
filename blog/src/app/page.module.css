@@ -48,5 +48,5 @@
   padding-left: 3vw;
   display: grid;
   grid-template-columns: 30vw 30vw 30vw;
-  gap: 1vw;
+  gap: 1px;
 }

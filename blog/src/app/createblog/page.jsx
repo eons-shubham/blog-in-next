@@ -21,8 +21,6 @@ const BlogForm = () => {
           "Content-Type": "application/json",
         },
       });
-
-      console.log("Response:", response.data);
       router.push("/");
     } catch (error) {
       console.error("Error posting data:", error);
@@ -34,8 +32,8 @@ const BlogForm = () => {
       title: newTitleInput,
       content: newBlogInput,
     };
-
-    postDataToServer(newBlogEntry);
+    if (newTitleInput.length > 0 && newBlogInput.length > 0)
+      postDataToServer(newBlogEntry);
   };
 
   return (
@@ -47,7 +45,9 @@ const BlogForm = () => {
         fontFamily: "Arial, sans-serif",
       }}
     >
-      <h2 style={{ textAlign: "center", marginBottom: "20px" }}>
+      <h2
+        style={{ textAlign: "center", marginBottom: "20px", fontSize: "28px" }}
+      >
         Create a New Blog Post
       </h2>
       <form>

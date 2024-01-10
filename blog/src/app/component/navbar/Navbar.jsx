@@ -6,12 +6,14 @@ const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <ul>
-        <li>
-          <Link href="/">Home</Link>
-        </li>
-        <li>
-          <Link href="/createblog">Create Blog</Link>
-        </li>
+        <div style={{ display: "flex", gap: "40px" }}>
+          <li>
+            <Link href="/">Home</Link>
+          </li>
+          <li>
+            <Link href="/createblog">Create Blog</Link>
+          </li>
+        </div>
         <li>
           <Link href="/profile">Profile</Link>
         </li>

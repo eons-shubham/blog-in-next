@@ -36,6 +36,25 @@ app.get("/getData", async (req, res) => {
   }
 });
 
+app.get("/api/blogs/:id", async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const blog = await prisma.blog.findUnique({
+      where: { id },
+    });
+
+    if (!blog) {
+      return res.status(404).json({ message: "Blog not found" });
+    }
+
+    res.json(blog);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Internal Server Error" });
+  }
+});
+
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
 });

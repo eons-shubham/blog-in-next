@@ -5,6 +5,7 @@ import Navbar from "./component/navbar/Navbar";
 import styles from "./page.module.css";
 import axios from "axios";
 import Footer from "./component/footer/Footer";
+import Link from "next/link";
 
 const Home = () => {
   const [blogData, setBlogData] = useState([]);
@@ -27,7 +28,13 @@ const Home = () => {
     <div>
       <div className={styles.blogBody}>
         {blogData.map((blog) => (
-          <BlogCard key={blog.id} title={blog.title} content={blog.content} />
+          <Link
+            key={blog.id}
+            href={`/student/${blog.id}`}
+            style={{ textDecoration: "none", color: "black" }}
+          >
+            <BlogCard key={blog.id} title={blog.title} content={blog.content} />
+          </Link>
         ))}
       </div>
     </div>
