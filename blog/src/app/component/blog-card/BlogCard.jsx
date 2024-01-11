@@ -8,7 +8,12 @@ const BlogCard = ({ title, content }) => {
   }
   return (
     <div className={styles.blogCard}>
-      <img src="mockImage.jpg" alt="" width={385} />
+      <img
+        src="mockImage.jpg"
+        alt=""
+        width={385}
+        style={{ borderRadius: "10px" }}
+      />
       <h2 style={{ textTransform: "uppercase" }}>{title}</h2>
       <p style={{ textTransform: "uppercase" }}>{content}</p>
     </div>

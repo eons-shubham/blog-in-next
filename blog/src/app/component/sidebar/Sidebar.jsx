@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import styles from "./Sidebar.module.css";
-import { MyContext } from "@/app/profile/layout";
+import { MyContext } from "../../profile/layout";
 import { useState, useEffect, useContext } from "react";
 
 const Sidebar = () => {
@@ -47,8 +47,18 @@ const Sidebar = () => {
   };
   return (
     <div className={styles.sidebar}>
-      <button onClick={() => handleClick(5)}>Change Name</button>
-      <button onClick={() => handleClick(10)}>Change Bio</button>
+      <button
+        onClick={() => handleClick(5)}
+        style={{ fontFamily: "Fira Code", fontSize: "15px" }}
+      >
+        Change Name
+      </button>
+      <button
+        onClick={() => handleClick(10)}
+        style={{ fontFamily: "Fira Code", fontSize: "15px" }}
+      >
+        Change Bio
+      </button>
       <div className={styles.inputArea}>
         {showName && (
           <input

@@ -1,10 +1,10 @@
 .blogCard {
   border: 1px solid #ccc;
-  padding: 16px;
-  margin: 16px;
   border-radius: 8px;
-  width: 25vw;
-  height: auto;
-  word-wrap: break-word;
   border-radius: 14px;
+  height: auto;
+  margin: 16px;
+  padding: 16px;
+  width: 25vw;
+  word-wrap: break-word;
 }

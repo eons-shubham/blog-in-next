@@ -1,22 +1,28 @@
+.blogBody {
+  display: grid;
+  gap: 1px;
+  grid-template-columns: 30vw 30vw 30vw;
+  padding-left: 3vw;
+}
+
 .createNewBlog {
   background-color: #4caf50;
-  color: white;
-  padding: 10px 15px;
-  font-size: 16px;
-  cursor: pointer;
-  padding: 16px;
-  margin: 16px;
   border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 16px;
+  padding: 16px;
 }
+
 .submitButton {
   background-color: #4caf50;
-  color: white;
-  padding: 10px 15px;
-  font-size: 16px;
-  cursor: pointer;
-  padding: 16px;
-  margin: 16px;
   border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 16px;
+  padding: 16px;
 }
 
 .submitButton:hover {
@@ -24,29 +30,18 @@
 }
 
 .textarea {
-  width: 100%;
-  padding: 10px;
-  margin: 8px 0;
-  box-sizing: border-box;
   border: 1px solid #ccc;
   border-radius: 4px;
+  box-sizing: border-box;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 8px 0;
+  padding: 10px;
   resize: vertical;
 }
 
-.textarea:hover,
-.textarea:focus {
+.textarea:focus,
+.textarea:hover {
   border: 1px solid #007bff;
-}
-
-.textarea {
-  font-size: 16px;
-  line-height: 1.5;
-  color: #333;
-}
-
-.blogBody {
-  padding-left: 3vw;
-  display: grid;
-  grid-template-columns: 30vw 30vw 30vw;
-  gap: 1px;
 }

@@ -30,7 +30,7 @@ const Home = () => {
         {blogData.map((blog) => (
           <Link
             key={blog.id}
-            href={`/student/${blog.id}`}
+            href={`/blogcontent/${blog.id}`}
             style={{ textDecoration: "none", color: "black" }}
           >
             <BlogCard key={blog.id} title={blog.title} content={blog.content} />
