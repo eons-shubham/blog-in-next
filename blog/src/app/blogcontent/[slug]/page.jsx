@@ -10,7 +10,7 @@ const page = ({ params }) => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8080/api/blogs/${params.slug}`
+          `/api/getblogcontent?id=${params.slug}`
         );
         setData(response.data);
       } catch (error) {
