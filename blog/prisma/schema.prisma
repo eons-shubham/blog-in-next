@@ -10,6 +10,6 @@ generator client {
 
 model Blog {
   id      String @id @default(auto()) @map("_id") @db.ObjectId
-  title String
+  title   String
   content String
 }

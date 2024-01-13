@@ -11,7 +11,7 @@ const BlogForm = () => {
   const router = useRouter();
 
   const postDataToServer = async (newBlogEntry) => {
-    const url = "http://localhost:8080/saveData";
+    const url = "/api/saveblogdata";
     const { title, content } = newBlogEntry;
     let postData = { title, content };
 
@@ -26,6 +26,7 @@ const BlogForm = () => {
       console.error("Error posting data:", error);
     }
   };
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     const newBlogEntry = {
