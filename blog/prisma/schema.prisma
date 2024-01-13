@@ -1,4 +1,3 @@
-
 datasource db {
   provider = "mongodb"
   url      = env("DATABASE_URL")
@@ -9,7 +8,9 @@ generator client {
 }
 
 model Blog {
-  id      String @id @default(auto()) @map("_id") @db.ObjectId
-  title   String
-  content String
+  id        String @id @default(auto()) @map("_id") @db.ObjectId
+  title     String
+  content   String
+  imageURL  String
 }
+

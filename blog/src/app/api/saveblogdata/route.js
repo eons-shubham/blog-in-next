@@ -6,11 +6,12 @@ const prisma = new PrismaClient();
 export async function POST(request) {
   try {
     const payload = await request.json();
-    const { title, content } = payload;
+    const { title, content, imageURL } = payload;
     const newData = await prisma.Blog.create({
       data: {
         title,
         content,
+        imageURL,
       },
       include: {},
     });

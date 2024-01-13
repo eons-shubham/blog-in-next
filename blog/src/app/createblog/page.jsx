@@ -8,12 +8,14 @@ import { useRouter } from "next/navigation";
 const BlogForm = () => {
   const [newBlogInput, setNewBlowInput] = useState("");
   const [newTitleInput, setNewTitleInput] = useState("");
+  const [image, setImage] = useState("");
+  const [imageURL, setImageURL] = useState("");
   const router = useRouter();
 
   const postDataToServer = async (newBlogEntry) => {
     const url = "/api/saveblogdata";
-    const { title, content } = newBlogEntry;
-    let postData = { title, content };
+    const { title, content, imageURL } = newBlogEntry;
+    let postData = { title, content, imageURL };
 
     try {
       const response = await axios.post(url, postData, {
@@ -21,20 +23,40 @@ const BlogForm = () => {
           "Content-Type": "application/json",
         },
       });
+      console.log("pushing complete");
       router.push("/");
     } catch (error) {
       console.error("Error posting data:", error);
     }
   };
-  
-  const handleSubmit = (e) => {
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    let responseImageUrl;
+    if (image.type == "image/jpeg" || image.type == "image/png") {
+      try {
+        const data = new FormData();
+        data.append("file", image);
+        data.append("upload_preset", "blog-in-next");
+        data.append("cloud-name", "dqohvcb0s");
+        const url = `https://api.cloudinary.com/v1_1/dqohvcb0s/image/upload`;
+        const res = await axios.post(url, data);
+        setImageURL(res.data.url);
+        responseImageUrl = res.data.url;
+      } catch (error) {
+        console.error("Error uploading file", error);
+      }
+    }
+
     const newBlogEntry = {
       title: newTitleInput,
       content: newBlogInput,
+      imageURL: responseImageUrl,
     };
-    if (newTitleInput.length > 0 && newBlogInput.length > 0)
+    if (newTitleInput.length > 0 && newBlogInput.length > 0) {
+      console.log(newBlogEntry);
       postDataToServer(newBlogEntry);
+    }
   };
 
   return (
@@ -86,6 +108,12 @@ const BlogForm = () => {
         <button className={styles.button} onClick={handleSubmit}>
           Submit
         </button>
+        <input
+          type="file"
+          onChange={(e) => {
+            setImage(e.target.files[0]);
+          }}
+        />
       </form>
     </div>
   );

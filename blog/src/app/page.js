@@ -32,7 +32,7 @@ const Home = () => {
             href={`/blogcontent/${blog.id}`}
             style={{ textDecoration: "none", color: "black" }}
           >
-            <BlogCard key={blog.id} title={blog.title} content={blog.content} />
+            <BlogCard key={blog.id} title={blog.title} content={blog.content} imageURL={blog.imageURL}/>
           </Link>
         ))}
       </div>
