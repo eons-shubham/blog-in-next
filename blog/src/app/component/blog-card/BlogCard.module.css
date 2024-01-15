@@ -8,3 +8,42 @@
   width: 25vw;
   word-wrap: break-word;
 }
+
+.blogCard h2 {
+  height: 3rem;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+}
+
+.authorDetails {
+  margin-right: 40%;
+}
+.authorDetails p:first-child {
+  font-size: 0.9rem;
+  margin: 0px;
+  flex: 1;
+}
+.authorDetails p:nth-child(2) {
+  font-size: 0.8rem;
+  margin: 0px;
+  color: #a5a5a5;
+}
+
+@media only screen and (max-width: 1200px) {
+  .blogCard {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    border-radius: 14px;
+    height: auto;
+    margin: 16px;
+    padding: 16px;
+    width: 82vw;
+    word-wrap: break-word;
+  }
+  .blogCard h2 {
+    height: auto;
+  }
+}

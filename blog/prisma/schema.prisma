@@ -12,5 +12,8 @@ model Blog {
   title     String
   content   String
   imageURL  String
+  author    String
+  category  String
+  timestamp DateTime @default(now()) @map("timestamp")
 }
 

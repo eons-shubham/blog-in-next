@@ -5,30 +5,6 @@
   padding-left: 3vw;
 }
 
-.createNewBlog {
-  background-color: #4caf50;
-  border-radius: 8px;
-  color: white;
-  cursor: pointer;
-  font-size: 16px;
-  margin: 16px;
-  padding: 16px;
-}
-
-.submitButton {
-  background-color: #4caf50;
-  border-radius: 8px;
-  color: white;
-  cursor: pointer;
-  font-size: 16px;
-  margin: 16px;
-  padding: 16px;
-}
-
-.submitButton:hover {
-  background-color: #45a049;
-}
-
 .textarea {
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -44,4 +20,12 @@
 .textarea:focus,
 .textarea:hover {
   border: 1px solid #007bff;
+}
+
+@media only screen and (max-width: 1200px) {
+  .blogBody {
+    display: grid;
+    grid-template-columns: 100%;
+    padding-left: 0;
+  }
 }

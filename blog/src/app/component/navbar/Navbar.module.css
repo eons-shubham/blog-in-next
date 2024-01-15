@@ -2,6 +2,11 @@
   background-color: #333333;
   height: 4vh;
   padding: 16px;
+  width: auto;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .navbar a {
@@ -27,4 +32,21 @@
   margin-left: 15px;
   margin-right: 110px;
   margin-top: 3px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 25vh;
+    width: auto;
+  }
+  .navbar a {
+    width: 100vw;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+  }
 }

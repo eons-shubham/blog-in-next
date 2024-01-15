@@ -5,19 +5,9 @@ import styles from "./Navbar.module.css";
 const Navbar = () => {
   return (
     <nav className={styles.navbar}>
-      <ul>
-        <div style={{ display: "flex", gap: "40px" }}>
-          <li>
-            <Link href="/">Home</Link>
-          </li>
-          <li>
-            <Link href="/createblog">Create Blog</Link>
-          </li>
-        </div>
-        <li>
-          <Link href="/profile">Profile</Link>
-        </li>
-      </ul>
+      <Link href="/">Home</Link>
+      <Link href="/createblog">Create Blog</Link>
+      <Link href="/profile">Profile</Link>
     </nav>
   );
 };

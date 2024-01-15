@@ -7,7 +7,7 @@ export async function GET(request) {
   const { searchParams } = new URL(request.url);
   const id = searchParams.get("id");
   try {
-    const blog = await prisma.blog.findUnique({
+    const blog = await prisma.Blog.findUnique({
       where: { id },
     });
 

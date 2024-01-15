@@ -10,13 +10,15 @@ const BlogForm = () => {
   const [newTitleInput, setNewTitleInput] = useState("");
   const [image, setImage] = useState("");
   const [imageURL, setImageURL] = useState("");
+  const [authorName, setAuthorName] = useState("Shubham Auth");
+  const [categoryName, setCategoryName] = useState("Shub Auth");
   const router = useRouter();
 
   const postDataToServer = async (newBlogEntry) => {
     const url = "/api/saveblogdata";
-    const { title, content, imageURL } = newBlogEntry;
-    let postData = { title, content, imageURL };
-
+    const { title, content, imageURL, author, category } = newBlogEntry;
+    let postData = { title, content, imageURL, author, category };
+    console.log(postData);
     try {
       const response = await axios.post(url, postData, {
         headers: {
@@ -52,9 +54,10 @@ const BlogForm = () => {
       title: newTitleInput,
       content: newBlogInput,
       imageURL: responseImageUrl,
+      author: authorName,
+      category: categoryName,
     };
     if (newTitleInput.length > 0 && newBlogInput.length > 0) {
-      console.log(newBlogEntry);
       postDataToServer(newBlogEntry);
     }
   };
@@ -104,16 +107,17 @@ const BlogForm = () => {
               setNewBlowInput(e.target.value);
             }}
           ></textarea>
+          <input
+            type="file"
+            onChange={(e) => {
+              setImage(e.target.files[0]);
+            }}
+            className={styles.uploadfile}
+          />
         </div>
         <button className={styles.button} onClick={handleSubmit}>
           Submit
         </button>
-        <input
-          type="file"
-          onChange={(e) => {
-            setImage(e.target.files[0]);
-          }}
-        />
       </form>
     </div>
   );
