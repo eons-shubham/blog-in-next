@@ -4,7 +4,7 @@ import styles from "./layout.module.css";
 import Sidebar from "../component/sidebar/Sidebar";
 import { useState, createContext } from "react";
 
-const MyContext = createContext();
+export const MyContext = createContext();
 
 export default function ProfileLayout({ children }) {
   const [userName, setUserName] = useState("");
@@ -26,5 +26,3 @@ export default function ProfileLayout({ children }) {
     </MyContext.Provider>
   );
 }
-
-export { MyContext };
