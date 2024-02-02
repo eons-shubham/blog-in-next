@@ -5,7 +5,7 @@ import axios from "axios";
 import styles from "./Page.module.css";
 import Chip from "../../component/chip/Chip";
 
-const Page = ({ params }) => {
+export default function Page ({ params }) {
   const [data, setData] = useState("");
   const [formattedDate, setFormattedDate] = useState();
   const [category, setCategory] = useState();
@@ -54,4 +54,3 @@ const Page = ({ params }) => {
   );
 };
 
-export default Page;
