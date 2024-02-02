@@ -4,7 +4,7 @@ import { useState, useEffect, useContext } from "react";
 import styles from "./Profile.module.css";
 import { MyContext } from "./layout";
 
-const page = () => {
+const Page = () => {
   const { userName, setUserName, userBio, setUserBio } = useContext(MyContext);
 
   return (
@@ -37,4 +37,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
